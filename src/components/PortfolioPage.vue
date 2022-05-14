@@ -1,11 +1,4 @@
-<template>
-	<section id="portfolio" class="pt-5">
-		<section-header header-text="Portfolio" />
-		<div class="row">
-			<div>Coming Soon</div>
-		</div>
-	</section>
-</template>
+<template></template>
 
 <script>
 import SectionHeader from './reusables/SectionHeader.vue';

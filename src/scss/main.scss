@@ -1,0 +1,109 @@
+:root {
+	--bg-primary-dark: #3a3845;
+	--bg-secondary-dark: #826f66;
+
+	--text-primary-light: #faebd7;
+	--text-secondary-light: #f7ccac;
+	--text-tertiary-light: #c69b7b;
+}
+
+*,
+*::after,
+*::before {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--bg-primary-dark);
+	margin: 0;
+	padding: 0;
+	font-family: 'Montserrat';
+	font-size: 12pt;
+	color: var(--text-secondary-light) !important;
+}
+
+.navbar {
+	background-color: var(--bg-primary-dark) !important;
+
+	.navbar-brand {
+		cursor: default;
+		color: var(--text-secondary-light) !important;
+	}
+
+	.navbar-toggler {
+		border: none !important;
+
+		&:focus {
+			outline: none;
+			box-shadow: none;
+		}
+	}
+
+	.nav-link {
+		color: var(--text-secondary-light) !important;
+		width: 100px;
+		margin: auto;
+		text-align: center;
+
+		&::after {
+			content: '';
+			display: block;
+			height: 0.175rem;
+			width: 0;
+			margin-top: 5px;
+			bottom: 0;
+			background-color: var(--text-secondary-light);
+		}
+
+		&:focus {
+			color: var(--text-primary-light) !important;
+
+			&::after {
+				content: '';
+				display: block;
+				height: 0.175rem;
+				width: 100%;
+				margin-top: 5px;
+				bottom: 0;
+				background-color: var(--text-primary-light);
+			}
+		}
+
+		&:hover {
+			color: var(--text-primary-light) !important;
+
+			&::after {
+				width: 100%;
+				transition: all 0.75s ease;
+			}
+		}
+	}
+}
+
+.home {
+	.parallax {
+		background-image: url('./assets/parallax.jpg');
+		min-height: 100vh;
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	.welcome {
+		color: var(--text-primary-light) !important;
+		width: 100%;
+		text-align: center;
+		background-color: rgba(0, 0, 0, 0.5);
+
+		strong {
+			font-weight: bold;
+		}
+	}
+}
+
+.about {
+	padding: 5rem 0;
+}

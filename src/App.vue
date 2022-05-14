@@ -28,29 +28,5 @@ export default {
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 @import 'bootstrap/dist/css/bootstrap.css';
-
-body {
-	font-family: 'Montserrat';
-	overflow-x: hidden;
-	background-color: antiquewhite;
-	padding-bottom: 50px;
-
-	section {
-		text-align: center;
-	}
-}
-
-::-webkit-scrollbar {
-	width: 12px;
-	background-color: transparent;
-}
-::-webkit-scrollbar-track {
-	background-color: transparent !important;
-}
-::-webkit-scrollbar-thumb {
-	background-color: rgb(243, 217, 186);
-}
-::-webkit-scrollbar-thumb:hover {
-	background: rgb(248, 210, 164);
-}
+@import './scss/main.scss';
 </style>

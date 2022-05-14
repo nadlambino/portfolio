@@ -1,6 +1,5 @@
 <template>
-	<section id="about" class="pt-5">
-		<section-header header-text="About" />
+	<section id="about" class="about">
 		<div class="row">
 			<div class="col-12 col-md-4">
 				<div class="card">
