@@ -43,12 +43,8 @@
 </template>
 
 <script>
-import SectionHeader from './reusables/SectionHeader.vue';
 export default {
 	name: 'AboutPage',
-	components: {
-		SectionHeader,
-	},
 };
 </script>
 

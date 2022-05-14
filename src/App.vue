@@ -1,9 +1,10 @@
 <template>
-	<navigation-bar />
-	<home-page />
-	<about-page />
-	<portfolio-page />
-	<contact-page />
+	<navigation-bar></navigation-bar>
+	<router-view class="router-view ps-3 pe-3 ps-sm-5 pe-sm-5" v-slot="{ Component }">
+		<transition name="fade">
+			<component :is="Component"></component>
+		</transition>
+	</router-view>
 </template>
 
 <script>
@@ -22,11 +23,29 @@ export default {
 		PortfolioPage,
 		ContactPage,
 	},
+	mounted() {
+		window.addEventListener('scroll', this.scroll);
+	},
+	methods: {
+		scroll() {
+			let section = document.querySelectorAll('.section');
+
+			section.forEach((el) => {
+				let windowHeight = window.innerHeight;
+				let revealTop = el.getBoundingClientRect().top;
+				let revealPoint = 50;
+
+				if (revealTop < windowHeight - revealPoint) {
+					el.classList.add('section-active');
+				} else {
+					el.classList.remove('section-active');
+				}
+			});
+		},
+	},
 };
 </script>
 
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-@import 'bootstrap/dist/css/bootstrap.css';
 @import './scss/main.scss';
 </style>

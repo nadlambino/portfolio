@@ -1,7 +1,5 @@
 <template>
-	<nav
-		class="navbar navbar-expand-lg navbar-light bg-light fixed-top ps-sm-5 pe-sm-5"
-	>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top ps-sm-5 pe-sm-5">
 		<div class="container-fluid">
 			<a class="navbar-brand">Nad Lambino</a>
 			<button
@@ -11,16 +9,15 @@
 				data-bs-target="#navbar-nav"
 				aria-controls="navbar-nav"
 				aria-expanded="false"
-				aria-label="Toggle navigation"
-			>
+				aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse text-end" id="navbar-nav">
 				<ul class="nav navbar-nav ms-auto">
-					<nav-link linkText="Home" link="#home" />
-					<nav-link linkText="About" link="#about" />
-					<nav-link linkText="Portfolio" link="#portfolio" />
-					<nav-link linkText="Contact" link="#contact" />
+					<router-link to="/" class="nav-link">Home</router-link>
+					<router-link to="/about" class="nav-link">About</router-link>
+					<router-link to="/portfolio" class="nav-link">Portfolio</router-link>
+					<router-link to="/contact" class="nav-link">Contact</router-link>
 				</ul>
 			</div>
 		</div>
@@ -28,12 +25,8 @@
 </template>
 
 <script>
-import NavLink from './navbar/NavLink.vue';
 
 export default {
-	name: 'NavigationBar',
-	components: {
-		NavLink,
-	},
+	name: 'NavigationBar'
 };
 </script>

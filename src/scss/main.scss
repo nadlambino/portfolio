@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import 'bootstrap/dist/css/bootstrap.css';
+
 :root {
 	--bg-primary-dark: #3a3845;
 	--bg-secondary-dark: #826f66;
@@ -15,16 +18,22 @@
 	box-sizing: border-box;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	background-color: var(--bg-primary-dark);
 	margin: 0;
 	padding: 0;
 	font-family: 'Montserrat';
 	font-size: 12pt;
-	color: var(--text-secondary-light) !important;
+	color: var(--text-primary-light) !important;
+	overflow-x: hidden;
 }
 
 .navbar {
+	height: 80px;
 	background-color: var(--bg-primary-dark) !important;
 
 	.navbar-brand {
@@ -57,20 +66,6 @@ body {
 			background-color: var(--text-secondary-light);
 		}
 
-		&:focus {
-			color: var(--text-primary-light) !important;
-
-			&::after {
-				content: '';
-				display: block;
-				height: 0.175rem;
-				width: 100%;
-				margin-top: 5px;
-				bottom: 0;
-				background-color: var(--text-primary-light);
-			}
-		}
-
 		&:hover {
 			color: var(--text-primary-light) !important;
 
@@ -80,23 +75,36 @@ body {
 			}
 		}
 	}
+	
+	.router-link-active {
+		color: var(--text-primary-light) !important;
+
+		&::after {
+			content: '';
+			display: block;
+			height: 0.175rem;
+			width: 100%;
+			margin-top: 5px;
+			bottom: 0;
+			background-color: var(--text-primary-light);
+		}
+	}
+}
+
+.router-view {
+	margin-top: 120px;
+	min-height: calc(100vh - 120px);
 }
 
 .home {
 	.parallax {
-		background-image: url('./assets/parallax.jpg');
-		min-height: 100vh;
-		background-attachment: fixed;
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
+		min-height: calc(100vh - 120px);
 	}
 
 	.welcome {
 		color: var(--text-primary-light) !important;
 		width: 100%;
 		text-align: center;
-		background-color: rgba(0, 0, 0, 0.5);
 
 		strong {
 			font-weight: bold;
@@ -105,5 +113,10 @@ body {
 }
 
 .about {
-	padding: 5rem 0;
+}
+
+.portfolio {
+}
+
+.contact {
 }

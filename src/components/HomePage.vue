@@ -1,5 +1,5 @@
 <template>
-	<section class="home" id="home">
+	<section class="home section-active" id="home">
 		<div class="parallax d-flex align-items-center justify-content-center">
 			<div class="welcome p-5">
 				<p class="display-1">Hi, I am <strong>Ronald</strong></p>
@@ -10,10 +10,7 @@
 </template>
 
 <script>
-import SectionHeader from './reusables/SectionHeader.vue';
-
 export default {
-	components: { SectionHeader },
 	name: 'HomePage',
 };
 </script>
