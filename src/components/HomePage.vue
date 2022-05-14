@@ -1,16 +1,22 @@
 <template>
-	<div class="parallax d-flex align-items-center justify-content-center">
-		<div class="welcome p-5 text-center">
-			<h1 class="display-1">Hey there, I am Nad</h1>
-			<div>
-				I am a passionate web developer and I love building something
-				than can be use by people.
+	<section id="home">
+		<div class="parallax d-flex align-items-center justify-content-center">
+			<div class="welcome p-5">
+				<h1 class="display-1">Hey there, I am Nad</h1>
+				<div>
+					I am a passionate web developer and I love building
+					something than can be use by people.
+				</div>
 			</div>
 		</div>
-	</div>
+	</section>
 </template>
 
-<script></script>
+<script>
+export default {
+	name: 'HomePage',
+};
+</script>
 
 <style scoped>
 .parallax {
