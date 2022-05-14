@@ -1,10 +1,6 @@
 <template>
 	<navigation-bar></navigation-bar>
-	<router-view class="router-view ps-3 pe-3 ps-sm-5 pe-sm-5" v-slot="{ Component }">
-		<transition name="fade">
-			<component :is="Component"></component>
-		</transition>
-	</router-view>
+	<router-view class="router-view ps-3 pe-3 ps-sm-5 pe-sm-5"></router-view>
 </template>
 
 <script>
