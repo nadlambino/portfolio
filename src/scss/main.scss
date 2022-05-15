@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 @import 'bootstrap/dist/css/bootstrap.css';
+@import './animations.scss';
 
 :root {
 	--bg-primary-dark: #3a3845;
@@ -8,6 +9,8 @@
 	--text-primary-light: #faebd7;
 	--text-secondary-light: #f7ccac;
 	--text-tertiary-light: #c69b7b;
+
+	--text-primary-accent: #00ff8d;
 }
 
 *,
@@ -38,7 +41,7 @@ body {
 
 	.navbar-brand {
 		cursor: default;
-		color: var(--text-secondary-light) !important;
+		color: var(--text-primary-light) !important;
 	}
 
 	.navbar-toggler {
@@ -51,7 +54,7 @@ body {
 	}
 
 	.nav-link {
-		color: var(--text-secondary-light) !important;
+		color: var(--text-primary-light) !important;
 		width: 100px;
 		margin: auto;
 		text-align: center;
@@ -63,11 +66,11 @@ body {
 			width: 0;
 			margin-top: 5px;
 			bottom: 0;
-			background-color: var(--text-secondary-light);
+			background-color: var(--text-primary-accent);
 		}
 
 		&:hover {
-			color: var(--text-primary-light) !important;
+			color: var(--text-primary-accent) !important;
 
 			&::after {
 				width: 100%;
@@ -77,7 +80,7 @@ body {
 	}
 	
 	.router-link-active {
-		color: var(--text-primary-light) !important;
+		color: var(--text-primary-accent) !important;
 
 		&::after {
 			content: '';
@@ -86,7 +89,7 @@ body {
 			width: 100%;
 			margin-top: 5px;
 			bottom: 0;
-			background-color: var(--text-primary-light);
+			background-color: var(--text-primary-accent);
 		}
 	}
 }
@@ -97,17 +100,37 @@ body {
 }
 
 .home {
-	.parallax {
-		min-height: calc(100vh - 120px);
-	}
+	.welcome-container {
+		min-height: 70vh;
+		margin: auto;
 
-	.welcome {
-		color: var(--text-primary-light) !important;
-		width: 100%;
-		text-align: center;
+		.image {
+			background-image: url('/src/assets/logo.png');
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: right;
+			animation: 1s slideInFromLeft;
+		}
 
-		strong {
-			font-weight: bold;
+		.welcome {
+			color: var(--text-primary-light) !important;
+			animation: 1s slideInFromRight;
+
+			p {
+				margin: 0;
+				width: 400px;
+			}
+
+			.intro, .job-title {
+				font-size: 24pt;
+
+			}
+
+			.name {
+				font-weight: bold;
+				font-size: 56pt;
+				color: var(--text-primary-accent);
+			}
 		}
 	}
 }
