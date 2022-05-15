@@ -1,17 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 @import 'bootstrap/dist/css/bootstrap.css';
 @import './animations.scss';
-
-:root {
-	--bg-primary-dark: #3a3845;
-	--bg-secondary-dark: #826f66;
-
-	--text-primary-light: #faebd7;
-	--text-secondary-light: #f7ccac;
-	--text-tertiary-light: #c69b7b;
-
-	--text-primary-accent: #00ff8d;
-}
+@import './variables.scss';
 
 *,
 *::after,
@@ -100,6 +90,7 @@ body {
 }
 
 .home {
+
 	.welcome-container {
 		min-height: 70vh;
 		margin: auto;
@@ -110,26 +101,47 @@ body {
 			background-repeat: no-repeat;
 			background-position: right;
 			animation: 1s slideInFromLeft;
+			min-width: 100px;
+			min-height: 100px;
 		}
 
 		.welcome {
-			color: var(--text-primary-light) !important;
+			color: var(--text-dark-accent) !important;
 			animation: 1s slideInFromRight;
 
-			p {
+			.message {
+				width: 300px;
 				margin: 0;
-				width: 400px;
+				padding: 0;
 			}
 
 			.intro, .job-title {
-				font-size: 24pt;
+				font-size: 16pt;
+			}
 
+			.job-title {
+				color: var(--text-primary-accent);
 			}
 
 			.name {
-				font-weight: bold;
-				font-size: 56pt;
-				color: var(--text-primary-accent);
+				font-weight: bolder;
+				font-size: 64pt;
+				margin-left: -5px;
+				color: var(--text-dark-accent) !important;
+			}
+		}
+
+		
+	@media only screen and (max-width: 767px) {
+			.image {
+				background-position: center;
+				margin-bottom: 50px !important;
+			}
+	
+			.welcome {
+				.message {
+					width: 100% !important;
+				}
 			}
 		}
 	}
