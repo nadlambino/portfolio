@@ -1,8 +1,10 @@
 import { createApp } from 'vue';
 import { createRouter, createWebHashHistory } from 'vue-router';
-import App from './App.vue';
-import 'bootstrap';
 import { routes } from './router/routes';
+import App from './App.vue';
+import './scss/main.scss';
+import { OhVueIcon, addIcons } from 'oh-vue-icons';
+import { GiHamburgerMenu, IoCloseSharp } from 'oh-vue-icons/icons';
 
 const app = createApp(App);
 
@@ -12,4 +14,9 @@ const router = createRouter({
 });
 
 app.use(router);
+
+addIcons(GiHamburgerMenu);
+addIcons(IoCloseSharp);
+app.component('v-icon', OhVueIcon);
+
 app.mount('#app');

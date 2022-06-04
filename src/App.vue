@@ -1,23 +1,15 @@
 <template>
 	<navigation-bar></navigation-bar>
-	<router-view class="router-view ps-3 pe-3 ps-sm-5 pe-sm-5"></router-view>
+	<router-view class="router-view"></router-view>
 </template>
 
 <script>
 import NavigationBar from './components/NavigationBar.vue';
-import HomePage from './components/HomePage.vue';
-import AboutPage from './components/AboutPage.vue';
-import PortfolioPage from './components/PortfolioPage.vue';
-import ContactPage from './components/ContactPage.vue';
 
 export default {
 	name: 'App',
 	components: {
-		NavigationBar,
-		HomePage,
-		AboutPage,
-		PortfolioPage,
-		ContactPage,
+		NavigationBar
 	},
 	mounted() {
 		window.addEventListener('scroll', this.scroll);
@@ -41,7 +33,3 @@ export default {
 	},
 };
 </script>
-
-<style lang="scss">
-@import './scss/main.scss';
-</style>

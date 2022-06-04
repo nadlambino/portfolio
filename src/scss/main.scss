@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-@import 'bootstrap/dist/css/bootstrap.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @import './animations.scss';
 @import './variables.scss';
 
@@ -13,145 +14,34 @@
 
 html {
 	scroll-behavior: smooth;
+	font-size: 16px;
 }
 
 body {
 	background-color: var(--bg-primary-dark);
+	color: var(--text-primary-light);
+	overflow-x: hidden;
 	margin: 0;
 	padding: 0;
-	font-family: 'Montserrat';
-	font-size: 12pt;
-	color: var(--text-primary-light) !important;
-	overflow-x: hidden;
 }
 
-.navbar {
-	height: 80px;
-	background-color: var(--bg-primary-dark) !important;
-
-	.navbar-brand {
-		cursor: default;
-		color: var(--text-primary-light) !important;
-	}
-
-	.navbar-toggler {
-		border: none !important;
-
-		&:focus {
-			outline: none;
-			box-shadow: none;
-		}
-	}
-
+nav {
 	.nav-link {
-		color: var(--text-primary-light) !important;
-		width: 100px;
-		margin: auto;
-		text-align: center;
-
-		&::after {
-			content: '';
-			display: block;
-			height: 0.175rem;
-			width: 0;
-			margin-top: 5px;
-			bottom: 0;
-			background-color: var(--text-primary-accent);
-		}
-
-		&:hover {
-			color: var(--text-primary-accent) !important;
-
-			&::after {
-				width: 100%;
-				transition: all 0.75s ease;
-			}
-		}
-	}
-	
-	.router-link-active {
-		color: var(--text-primary-accent) !important;
-
-		&::after {
-			content: '';
-			display: block;
-			height: 0.175rem;
-			width: 100%;
-			margin-top: 5px;
-			bottom: 0;
-			background-color: var(--text-primary-accent);
-		}
-	}
-}
-
-.router-view {
-	margin-top: 120px;
-	min-height: calc(100vh - 120px);
-}
-
-.home {
-
-	.welcome-container {
-		min-height: 70vh;
-		margin: auto;
-
-		.image {
-			background-image: url('/src/assets/logo.png');
-			background-size: contain;
-			background-repeat: no-repeat;
-			background-position: right;
-			animation: 1s slideInFromLeft;
-			min-width: 100px;
-			min-height: 100px;
-		}
-
-		.welcome {
-			color: var(--text-dark-accent) !important;
-			animation: 1s slideInFromRight;
-
-			.message {
-				width: 300px;
-				margin: 0;
-				padding: 0;
-			}
-
-			.intro, .job-title {
-				font-size: 16pt;
-			}
-
-			.job-title {
-				color: var(--text-primary-accent);
-			}
-
-			.name {
-				font-weight: bolder;
-				font-size: 64pt;
-				margin-left: -5px;
-				color: var(--text-dark-accent) !important;
-			}
-		}
-
 		
-	@media only screen and (max-width: 767px) {
-			.image {
-				background-position: center;
-				margin-bottom: 50px !important;
-			}
-	
-			.welcome {
-				.message {
-					width: 100% !important;
-				}
-			}
+		li {
+			@apply 
+				hover:text-green-700 
+				md:mx-4
+				text-center
+				p-5
+				md:p-0
 		}
 	}
-}
 
-.about {
-}
-
-.portfolio {
-}
-
-.contact {
+	.nav-toggler {
+		@apply
+			cursor-pointer
+			md:hidden
+			-mt-1
+	}
 }
