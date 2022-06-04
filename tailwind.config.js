@@ -6,7 +6,11 @@ module.exports = {
     join(__dirname, 'src/**/*.{js,ts,tsx,vue}'),
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'green-neon': '#00ff8d'
+      }
+    },
   },
   plugins: [],
 }
