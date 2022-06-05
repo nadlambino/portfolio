@@ -1,5 +1,5 @@
 <template>
-	<nav class="md:flex justify-between">
+	<nav class="sm:flex justify-between">
 		<div class="nav-brand" ref="nav-brand">
 			<span class="font-bold">
 				<router-link to="/">Nad Lambino</router-link>
@@ -9,7 +9,7 @@
 				<v-icon scale="1.5" name="io-close-sharp" class="close-menu opacity-0" ref="close-menu"></v-icon>
 			</span>
 		</div>
-		<ul class="nav-link -mt-96 opacity-0 md:mt-auto md:opacity-100" ref="menu">
+		<ul class="nav-link -mt-96 opacity-0 sm:mt-auto sm:opacity-100" ref="menu">
 			<router-link to="/"><li>Home</li></router-link>
 			<router-link to="/about"><li>About</li></router-link>
 			<router-link to="/portfolio"><li>Portfolio</li></router-link>
