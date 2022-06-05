@@ -1,6 +1,6 @@
 <template>
 	<nav class="md:flex justify-between">
-		<div class="flex justify-between px-8 py-4 z-10 relative">
+		<div class="nav-brand" ref="nav-brand">
 			<span class="font-bold">
 				<router-link to="/">Nad Lambino</router-link>
 			</span>
@@ -10,10 +10,10 @@
 			</span>
 		</div>
 		<ul class="nav-link -mt-96 opacity-0 md:mt-auto md:opacity-100" ref="menu">
-			<li><router-link to="/">Home</router-link></li>
-			<li><router-link to="/about">About</router-link></li> 
-			<li><router-link to="/portfolio">Porfolio</router-link></li>
-			<li><router-link to="/contact">Contact</router-link></li>
+			<router-link to="/"><li>Home</li></router-link>
+			<router-link to="/about"><li>About</li></router-link>
+			<router-link to="/portfolio"><li>Portfolio</li></router-link>
+			<router-link to="/contact"><li>Contact</li></router-link>
 		</ul>
 	</nav>
 </template>
@@ -30,6 +30,7 @@ export default {
 	methods: {
 		handleToggleMenu() {
 			this.show = !this.show;
+			const navbrand = this.$refs['nav-brand']
 			const menu = this.$refs['menu'];
 			// Add $el to access the element inside of icon component
 			const open = this.$refs['open-menu'].$el;
@@ -39,6 +40,7 @@ export default {
 				menu.classList.remove('opacity-0');
 				close.classList.remove('rotate-180');
 				close.classList.remove('opacity-0');
+				navbrand.classList.add('shadow-md');
 				open.classList.add('rotate-180');
 				open.classList.add('opacity-0');
 			} else {
@@ -46,6 +48,7 @@ export default {
 				menu.classList.add('opacity-0');
 				close.classList.add('rotate-180');
 				close.classList.add('opacity-0');
+				navbrand.classList.remove('shadow-md');
 				open.classList.remove('rotate-180');
 				open.classList.remove('opacity-0');
 			}

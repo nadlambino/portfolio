@@ -1,6 +1,6 @@
 <template>
 	<section id="about">
-		
+		About
 	</section>
 </template>
 
