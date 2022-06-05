@@ -6,6 +6,14 @@ module.exports = {
     join(__dirname, 'src/**/*.{js,ts,tsx,vue}'),
   ],
   theme: {
+    screens: {
+      'xs': '300px',
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1536px',
+    },
     extend: {
       colors: {
         'green-neon': '#00ff8d',
