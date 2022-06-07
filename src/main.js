@@ -5,6 +5,9 @@ import App from './App.vue';
 import './scss/main.scss';
 import { OhVueIcon, addIcons } from 'oh-vue-icons';
 import { GiHamburgerMenu, IoCloseSharp } from 'oh-vue-icons/icons';
+import dayjs from 'dayjs';
+
+window.dayjs = dayjs;
 
 const app = createApp(App);
 
