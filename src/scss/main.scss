@@ -65,7 +65,7 @@ section#about {
 	@apply lg:w-3/4 lg:m-auto;
 
 	.timeline-container {
-		@apply sm:w-1/2 sm:ml-auto;
+		@apply sm:w-1/2 sm:ml-auto text-gray-500;
 
 		.timeline-track {
 			@apply absolute w-1 h-full bg-blue-400 rounded-md;
@@ -83,9 +83,20 @@ section#about {
 				@apply w-9 h-1 bg-blue-400 absolute z-0 -left-8 top-[30px];
 			}
 	
-			.timeline-details {
-				@apply bg-blue-400 rounded px-4 py-2 text-xs;
+			.timeline-event {
+				@apply bg-blue-400 rounded px-4 py-2 text-xs relative z-10;
+
+				.timeline-date {
+					@apply text-blue-200 text-xs;
+				}
 				
+				.timeline-title {
+					@apply text-xl font-semibold text-blue-50;
+				}
+
+				.timeline-details {
+					@apply text-blue-50 mt-2 text-sm;
+				}
 			}
 		}
 
