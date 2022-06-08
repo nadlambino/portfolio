@@ -19,12 +19,12 @@ html {
 }
 
 body {
-	@apply bg-dark-100 overflow-x-hidden text-orange-100;
+	@apply bg-dark-100 overflow-x-hidden text-orange-100 w-[100vw];
 	box-sizing: border-box;
 }
 
 nav {
-	@apply sm:px-20 h-10;
+	@apply sm:px-20 h-[60px] bg-dark-100 relative z-50;
 
 	.nav-brand {
 		@apply flex justify-between z-20 relative bg-dark-100 px-8 py-4 sm:shadow-none
@@ -33,7 +33,7 @@ nav {
 
 	.nav-link {
 		@apply ease-in-out duration-500 transition-all sm:flex
-		z-10 relative sm:mt-[0] bg-dark-200 sm:bg-dark-100 sm:py-4 sm:px-8;
+		z-10 relative sm:mt-[0] bg-dark-200 sm:bg-transparent sm:py-4 sm:px-8;
 
 		a {
 			@apply hover:text-green-neon hover:after:scale-x-100 text-center;
