@@ -15,15 +15,17 @@ html {
 	scroll-behavior: smooth;
 	font-size: 16px;
 	font-family: 'Poppins', sans-serif;
+	box-sizing: border-box;
 }
 
 body {
 	@apply bg-dark-100 overflow-x-hidden text-orange-100;
+	box-sizing: border-box;
 }
 
 nav {
 	@apply sm:px-20 h-10;
-	
+
 	.nav-brand {
 		@apply flex justify-between z-20 relative bg-dark-100 px-8 py-4 sm:shadow-none
 		transition-all duration-500;
@@ -32,7 +34,7 @@ nav {
 	.nav-link {
 		@apply ease-in-out duration-500 transition-all sm:flex
 		z-10 relative sm:mt-[0] bg-dark-200 sm:bg-dark-100 sm:py-4 sm:px-8;
-		
+
 		a {
 			@apply hover:text-green-neon hover:after:scale-x-100 text-center;
 
@@ -40,10 +42,9 @@ nav {
 				@apply px-0 sm:px-4 py-4 sm:py-0 text-center;
 			}
 
-			&::after {	
+			&::after {
 				@apply bg-green-neon transition-all ease-in-out duration-500
 				sm:mt-auto scale-0 scale-y-100 block content-[''] h-[0.2rem];
-
 			}
 		}
 	}
@@ -51,7 +52,8 @@ nav {
 	.nav-toggler {
 		@apply cursor-pointer sm:hidden -mt-1;
 
-		.open-menu, .close-menu {
+		.open-menu,
+		.close-menu {
 			@apply transition duration-500 ease-in-out;
 		}
 	}
@@ -68,28 +70,28 @@ section#about {
 		@apply sm:w-1/2 sm:ml-auto text-gray-500;
 
 		.timeline-track {
-			@apply absolute w-1 h-full bg-blue-400 rounded-md;
+			@apply absolute w-1 h-full bg-blue-400 rounded-md animate-slide-down;
 		}
-	
+
 		.timeline-content {
-			@apply ml-8 rounded my-8 relative;
-	
+			@apply ml-8 rounded my-8 relative animate-slide-down;
+
 			.timeline-dot {
 				@apply w-4 h-4 bg-dark-100 border-4 border-blue-400 absolute z-10 
 				rounded-lg left-[-38px] top-6;
 			}
-	
+
 			.timeline-arrow {
 				@apply w-9 h-1 bg-blue-400 absolute z-0 -left-8 top-[30px];
 			}
-	
+
 			.timeline-event {
 				@apply bg-blue-400 rounded px-4 py-2 text-xs relative z-10;
 
 				.timeline-date {
 					@apply text-blue-200 text-xs;
 				}
-				
+
 				.timeline-title {
 					@apply text-xl font-semibold text-blue-50;
 				}
@@ -101,14 +103,14 @@ section#about {
 		}
 
 		.timeline-content-left {
-			@apply sm:right-full sm:ml-0 sm:mr-8;
-	
+			@apply sm:right-full sm:ml-0 sm:mr-8 animate-slide-up;
+
 			.timeline-dot {
 				@apply sm:left-full sm:ml-[26px];
 			}
-	
+
 			.timeline-arrow {
-				@apply sm:left-full
+				@apply sm:left-full;
 			}
 		}
 	}
