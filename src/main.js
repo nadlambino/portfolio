@@ -4,7 +4,12 @@ import { routes } from './router/routes';
 import App from './App.vue';
 import './scss/main.scss';
 import { OhVueIcon, addIcons } from 'oh-vue-icons';
-import { GiHamburgerMenu, IoCloseSharp } from 'oh-vue-icons/icons';
+import {
+	GiHamburgerMenu,
+	IoCloseSharp,
+	FaFileDownload,
+	MdDownloadTwotone,
+} from 'oh-vue-icons/icons';
 import dayjs from 'dayjs';
 
 window.dayjs = dayjs;
@@ -20,6 +25,8 @@ app.use(router);
 
 addIcons(GiHamburgerMenu);
 addIcons(IoCloseSharp);
+addIcons(FaFileDownload);
+addIcons(MdDownloadTwotone);
 app.component('v-icon', OhVueIcon);
 
 app.mount('#app');

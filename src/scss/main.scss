@@ -13,7 +13,7 @@
 
 html {
 	scroll-behavior: smooth;
-	font-size: 16px;
+	font-size: 14px;
 	font-family: 'Poppins', sans-serif;
 	box-sizing: border-box;
 	-webkit-tap-highlight-color: transparent;
@@ -28,12 +28,22 @@ nav {
 	@apply md:px-20 h-[60px] bg-dark-100 relative z-50;
 
 	.nav-brand {
-		@apply flex justify-between z-20 relative bg-dark-100 px-8 py-4 md:shadow-none
+		@apply flex justify-between z-20 relative bg-dark-100 px-8 py-4 top-1 md:px-0 md:shadow-none
 		transition-all duration-500;
 	}
 
+	.nav-download {
+		@apply z-20 relative bg-dark-200 text-center -top-1 px-8 py-4 md:bg-dark-100 md:px-0 md:shadow-none
+		transition-all duration-500;
+
+		.download-btn {
+			@apply rounded bg-dark-100 md:bg-dark-200 text-center px-4 py-2 uppercase relative
+			hover:bg-dark-50;
+		}
+	}
+
 	.nav-link {
-		@apply ease-in-out duration-500 transition-all md:flex
+		@apply ease-in-out duration-500 transition-all top-1 md:flex
 		z-10 relative md:mt-[0] bg-dark-200 md:bg-transparent md:py-4 md:px-8;
 
 		a {
@@ -83,7 +93,7 @@ section#about {
 
 			.timeline-dot {
 				@apply w-4 h-4 bg-dark-100 border-4 border-blue-400 absolute z-10 
-				rounded-lg left-[-38px] top-6;
+				rounded-lg left-[-33px] top-7;
 			}
 
 			.timeline-arrow {
@@ -111,7 +121,7 @@ section#about {
 			@apply md:right-full md:ml-0 md:mr-8 animate-slide-up;
 
 			.timeline-dot {
-				@apply md:left-full md:ml-[26px];
+				@apply md:left-full md:ml-[23px];
 			}
 
 			.timeline-arrow {

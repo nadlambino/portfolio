@@ -36,6 +36,21 @@
 				<li>Contact</li>
 			</router-link>
 		</ul>
+		<div class="nav-download">
+			<button
+				type="button"
+				class="download-btn"
+				@click="handleDownloadResume"
+			>
+				<!-- <v-icon scale="1" name="fa-file-download"></v-icon> -->
+				<v-icon
+					scale="1"
+					name="md-download-twotone"
+					ref="download-icon"
+				></v-icon>
+				Resume
+			</button>
+		</div>
 	</nav>
 </template>
 
@@ -82,6 +97,18 @@ export default {
 				open.classList.remove('rotate-180');
 				open.classList.remove('opacity-0');
 			}
+		},
+		handleDownloadResume() {
+			const downloadIcon = this.$refs['download-icon'].$el;
+			downloadIcon.classList.add('animate-bounce');
+			// Intended delay for bounce animation purpose
+			setTimeout(() => {
+				const anchor = document.createElement('a');
+				anchor.href = '/ronald-lambino-resume.pdf';
+				anchor.download = 'ronald-lambino-resume.pdf';
+				anchor.click();
+				downloadIcon.classList.remove('animate-bounce');
+			}, 1500);
 		},
 	},
 };
