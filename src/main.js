@@ -9,6 +9,7 @@ import {
 	IoCloseSharp,
 	MdDownloadTwotone,
 	IoHammerSharp,
+	HiEmojiSad,
 } from 'oh-vue-icons/icons';
 import dayjs from 'dayjs';
 
@@ -27,6 +28,7 @@ addIcons(GiHamburgerMenu);
 addIcons(IoCloseSharp);
 addIcons(MdDownloadTwotone);
 addIcons(IoHammerSharp);
+addIcons(HiEmojiSad);
 app.component('v-icon', OhVueIcon);
 
 app.mount('#app');
