@@ -24,26 +24,39 @@ body {
 	box-sizing: border-box;
 }
 
+.resume-download-container {
+	@apply z-0 relative bg-dark-200 text-center -top-1 px-8 py-4 md:bg-dark-100 md:px-0 md:shadow-none
+	transition-all duration-500;
+
+	.download-btn {
+		@apply rounded bg-dark-100 md:bg-dark-200 text-center px-4 py-2 uppercase relative
+		hover:bg-dark-50;
+	}
+}
+
+.resume-download-container-float {
+	@apply z-20 fixed right-0 bottom-8 md:hidden;
+
+	.download-btn {
+		@apply rounded bg-dark-200 mr-8 md:mr-20 px-4 py-2 uppercase relative
+		w-14 h-14 hover:bg-dark-50;
+
+		span {
+			@apply hidden;
+		}
+	}
+}
+
 nav {
-	@apply md:px-20 h-[60px] bg-dark-100 relative z-50;
+	@apply md:px-20 md:pt-2 h-[70px] w-full bg-dark-100 fixed z-50 -top-1;
 
 	.nav-brand {
-		@apply flex justify-between z-20 relative bg-dark-100 px-8 py-4 top-1 md:px-0 md:shadow-none
+		@apply flex justify-between z-20 relative bg-dark-100 px-8 py-4 md:px-0 md:shadow-none
 		transition-all duration-500;
-	}
-
-	.nav-download {
-		@apply z-20 relative bg-dark-200 text-center -top-1 px-8 py-4 md:bg-dark-100 md:px-0 md:shadow-none
-		transition-all duration-500;
-
-		.download-btn {
-			@apply rounded bg-dark-100 md:bg-dark-200 text-center px-4 py-2 uppercase relative
-			hover:bg-dark-50;
-		}
 	}
 
 	.nav-link {
-		@apply ease-in-out duration-500 transition-all top-1 md:flex
+		@apply ease-in-out duration-500 transition-all md:flex
 		z-10 relative md:mt-[0] bg-dark-200 md:bg-transparent md:py-4 md:px-8;
 
 		a {
@@ -75,7 +88,7 @@ nav {
 }
 
 section {
-	@apply relative z-0 mt-5 mx-8 md:mx-28 h-[70vh] flex items-center justify-center;
+	@apply relative z-0 top-[80px] mx-8 md:mx-28 h-[70vh] flex items-center justify-center;
 }
 
 section#about {

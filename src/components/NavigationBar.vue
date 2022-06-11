@@ -36,24 +36,15 @@
 				<li>Contact</li>
 			</router-link>
 		</ul>
-		<div class="nav-download">
-			<button
-				type="button"
-				class="download-btn"
-				@click="handleDownloadResume"
-			>
-				<v-icon
-					scale="1"
-					name="md-download-twotone"
-					ref="download-icon"
-				></v-icon>
-				Resume
-			</button>
-		</div>
+		<DownloadResumeButton
+			class="resume-download-container"
+			@onDownloadResume="handleDownloadResume"
+		/>
 	</nav>
 </template>
 
 <script>
+import DownloadResumeButton from './reusables/DownloadResumeButton.vue';
 export default {
 	name: 'NavigationBar',
 	data() {
@@ -110,5 +101,6 @@ export default {
 			}, 1500);
 		},
 	},
+	components: { DownloadResumeButton },
 };
 </script>
