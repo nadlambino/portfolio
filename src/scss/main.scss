@@ -37,7 +37,7 @@ nav {
 		z-10 relative md:mt-[0] bg-dark-200 md:bg-transparent md:py-4 md:px-8;
 
 		a {
-			@apply hover:text-green-neon hover:after:scale-x-100 text-center;
+			@apply hover:text-green-neon hover:after:scale-x-100 text-center uppercase;
 
 			li {
 				@apply px-0 md:px-4 py-4 md:py-0 text-center;
