@@ -45,6 +45,8 @@
 
 <script>
 import DownloadResumeButton from './reusables/DownloadResumeButton.vue';
+import useDownloadResume from '../composables/useDownloadResume';
+
 export default {
 	name: 'NavigationBar',
 	data() {
@@ -88,17 +90,9 @@ export default {
 				open.classList.remove('opacity-0');
 			}
 		},
-		handleDownloadResume() {
-			const downloadIcon = this.$refs['download-icon'].$el;
-			downloadIcon.classList.add('animate-bounce');
-			// Intended delay for bounce animation purpose
-			setTimeout(() => {
-				const anchor = document.createElement('a');
-				anchor.href = '/ronald-lambino-resume.pdf';
-				anchor.download = 'ronald-lambino-resume.pdf';
-				anchor.click();
-				downloadIcon.classList.remove('animate-bounce');
-			}, 1500);
+		handleDownloadResume(downloadIcon) {
+			const { downloadResume } = useDownloadResume();
+			downloadResume(downloadIcon);
 		},
 	},
 	components: { DownloadResumeButton },

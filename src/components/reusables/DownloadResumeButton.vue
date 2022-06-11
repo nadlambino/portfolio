@@ -16,7 +16,8 @@ export default {
 	name: 'DownloadResumeButton',
 	methods: {
 		handleDownloadClick() {
-			this.$emit('onDownloadResume');
+			const downloadIcon = this.$refs['download-icon'].$el;
+			this.$emit('onDownloadResume', downloadIcon);
 		},
 	},
 };
