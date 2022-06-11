@@ -16,6 +16,7 @@ html {
 	font-size: 16px;
 	font-family: 'Poppins', sans-serif;
 	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -24,33 +25,37 @@ body {
 }
 
 nav {
-	@apply sm:px-20 h-[60px] bg-dark-100 relative z-50;
+	@apply md:px-20 h-[60px] bg-dark-100 relative z-50;
 
 	.nav-brand {
-		@apply flex justify-between z-20 relative bg-dark-100 px-8 py-4 sm:shadow-none
+		@apply flex justify-between z-20 relative bg-dark-100 px-8 py-4 md:shadow-none
 		transition-all duration-500;
 	}
 
 	.nav-link {
-		@apply ease-in-out duration-500 transition-all sm:flex
-		z-10 relative sm:mt-[0] bg-dark-200 sm:bg-transparent sm:py-4 sm:px-8;
+		@apply ease-in-out duration-500 transition-all md:flex
+		z-10 relative md:mt-[0] bg-dark-200 md:bg-transparent md:py-4 md:px-8;
 
 		a {
 			@apply hover:text-green-neon hover:after:scale-x-100 text-center;
 
 			li {
-				@apply px-0 sm:px-4 py-4 sm:py-0 text-center;
+				@apply px-0 md:px-4 py-4 md:py-0 text-center;
 			}
 
 			&::after {
 				@apply bg-green-neon transition-all ease-in-out duration-500
-				sm:mt-auto scale-0 scale-y-100 block content-[''] h-[0.2rem];
+				md:mt-auto scale-0 scale-y-100 block content-[''] h-[0.2rem];
 			}
+		}
+
+		.router-link-exact-active {
+			@apply text-green-neon after:scale-x-100 text-center;
 		}
 	}
 
 	.nav-toggler {
-		@apply cursor-pointer sm:hidden -mt-1;
+		@apply cursor-pointer md:hidden -mt-1;
 
 		.open-menu,
 		.close-menu {
@@ -60,14 +65,14 @@ nav {
 }
 
 section {
-	@apply relative z-0 mt-5 mx-8 sm:mx-28;
+	@apply relative z-0 mt-5 mx-8 md:mx-28;
 }
 
 section#about {
 	@apply lg:w-3/4 lg:m-auto;
 
 	.timeline-container {
-		@apply sm:w-1/2 sm:ml-auto text-gray-500;
+		@apply md:w-1/2 md:ml-auto text-gray-500;
 
 		.timeline-track {
 			@apply absolute w-1 h-full bg-blue-400 rounded-md animate-slide-down;
@@ -86,31 +91,31 @@ section#about {
 			}
 
 			.timeline-event {
-				@apply bg-blue-400 rounded px-4 py-2 text-xs relative z-10;
+				@apply bg-blue-400 rounded px-4 py-4 text-xs relative z-10;
 
 				.timeline-date {
 					@apply text-blue-200 text-xs;
 				}
 
 				.timeline-title {
-					@apply text-xl font-semibold text-blue-50;
+					@apply text-lg font-semibold text-blue-50;
 				}
 
 				.timeline-details {
-					@apply text-blue-50 mt-2 text-sm;
+					@apply text-blue-50 mt-1 text-sm;
 				}
 			}
 		}
 
 		.timeline-content-left {
-			@apply sm:right-full sm:ml-0 sm:mr-8 animate-slide-up;
+			@apply md:right-full md:ml-0 md:mr-8 animate-slide-up;
 
 			.timeline-dot {
-				@apply sm:left-full sm:ml-[26px];
+				@apply md:left-full md:ml-[26px];
 			}
 
 			.timeline-arrow {
-				@apply sm:left-full;
+				@apply md:left-full;
 			}
 		}
 	}
