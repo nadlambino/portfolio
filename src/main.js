@@ -7,8 +7,8 @@ import { OhVueIcon, addIcons } from 'oh-vue-icons';
 import {
 	GiHamburgerMenu,
 	IoCloseSharp,
-	FaFileDownload,
 	MdDownloadTwotone,
+	IoHammerSharp,
 } from 'oh-vue-icons/icons';
 import dayjs from 'dayjs';
 
@@ -25,8 +25,8 @@ app.use(router);
 
 addIcons(GiHamburgerMenu);
 addIcons(IoCloseSharp);
-addIcons(FaFileDownload);
 addIcons(MdDownloadTwotone);
+addIcons(IoHammerSharp);
 app.component('v-icon', OhVueIcon);
 
 app.mount('#app');

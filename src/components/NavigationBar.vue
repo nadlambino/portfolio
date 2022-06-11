@@ -42,7 +42,6 @@
 				class="download-btn"
 				@click="handleDownloadResume"
 			>
-				<!-- <v-icon scale="1" name="fa-file-download"></v-icon> -->
 				<v-icon
 					scale="1"
 					name="md-download-twotone"

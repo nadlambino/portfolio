@@ -4,7 +4,7 @@
 </template>
 
 <script>
-import NavigationBar from './pages/NavigationBar.vue';
+import NavigationBar from './components/NavigationBar.vue';
 
 export default {
 	name: 'App',
