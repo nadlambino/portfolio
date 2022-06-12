@@ -4,18 +4,26 @@
 			<span class="font-bold">
 				<router-link to="/">Nad Lambino</router-link>
 			</span>
-			<span class="nav-toggler" @click="handleToggleMenu">
+			<span class="nav-toggler">
+				<DownloadResumeButton
+					class="resume-download-container-float"
+					:icon-scale="1.3"
+					:hide-text="true"
+					@onDownloadResume="handleDownloadResume"
+				/>
 				<v-icon
 					scale="1.5"
 					name="gi-hamburger-menu"
 					class="open-menu -mr-7"
 					ref="open-menu"
+					@click="handleToggleMenu"
 				></v-icon>
 				<v-icon
 					scale="1.5"
 					name="io-close-sharp"
 					class="close-menu opacity-0"
 					ref="close-menu"
+					@click="handleToggleMenu"
 				></v-icon>
 			</span>
 		</div>
@@ -36,10 +44,9 @@
 				<li>Contact</li>
 			</router-link>
 		</ul>
-		<DownloadResumeButton
-			class="resume-download-container"
-			@onDownloadResume="handleDownloadResume"
-		/>
+		<div class="resume-download-container">
+			<DownloadResumeButton @onDownloadResume="handleDownloadResume" />
+		</div>
 	</nav>
 </template>
 

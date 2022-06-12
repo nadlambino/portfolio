@@ -35,33 +35,15 @@ body {
 }
 
 .resume-download-container {
-	@apply z-0 relative bg-dark-200 text-center -top-1 px-8 py-4 md:bg-dark-100 md:px-0 md:shadow-none
-	transition-all duration-500;
-
-	.download-btn {
-		@apply rounded bg-dark-100 md:bg-dark-200 text-center px-4 py-2 uppercase relative
-		hover:bg-dark-50;
-	}
-}
-
-.resume-download-container-float {
-	@apply z-20 fixed right-0 bottom-8 md:hidden;
-
-	.download-btn {
-		@apply rounded bg-dark-200 mr-8 md:mr-20 px-4 py-2
-		w-14 h-14 hover:bg-dark-50;
-
-		span {
-			@apply hidden;
-		}
-	}
+	@apply z-0 relative bg-dark-200 text-center -top-2 px-8 py-4 md:bg-dark-100 md:px-0 md:shadow-none
+	transition-all duration-500 hidden md:block;
 }
 
 nav {
 	@apply md:px-20 md:pt-2 min-h-[70px] w-full bg-dark-100 fixed z-50 -top-1;
 
 	.nav-brand {
-		@apply flex justify-between z-20 relative bg-dark-100 px-8 py-4 md:px-0 md:shadow-none
+		@apply flex items-baseline justify-between z-20 relative bg-dark-100 px-8 py-4 md:px-0 md:shadow-none
 		transition-all duration-500;
 	}
 
